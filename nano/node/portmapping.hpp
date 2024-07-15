@@ -1,6 +1,6 @@
 #pragma once
 
-#include <miniupnp/miniupnpc/include/miniupnpc.h>
+#include <miniupnpc/miniupnpc.h>
 
 namespace nano
 {

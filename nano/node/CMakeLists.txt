@@ -206,14 +206,16 @@ target_link_libraries(
   nano_store
   secure
   rpc
-  libminiupnpc-static
+  miniupnpc
+  cryptopp
   argon2
   lmdb
-  Boost::beast
+  Boost::boost # beast
+  Boost::filesystem
   Boost::log_setup
   Boost::log
   Boost::program_options
-  Boost::stacktrace
+  #Boost::boost # stacktrace
   Boost::system
   Boost::thread
   rocksdb

@@ -12,7 +12,7 @@
 #include <stack>
 #include <unordered_set>
 
-#include <diskhash.hpp>
+#include <diskhash/diskhash.hpp>
 
 namespace nano::store
 {

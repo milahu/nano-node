@@ -112,14 +112,16 @@ target_link_libraries(
   ${CRYPTOPP_LIBRARY}
   ${CMAKE_DL_LIBS}
   Boost::iostreams
-  Boost::asio
-  Boost::circular_buffer
-  Boost::dll
+  Boost::boost # asio
+  #Boost::boost # circular_buffer
+  #Boost::boost # dll
   Boost::log_setup
   Boost::log
-  Boost::multiprecision
+  #Boost::boost # multiprecision
   Boost::program_options
-  Boost::stacktrace)
+  #Boost::boost # property_tree
+  #Boost::boost # stacktrace
+)
 
 if(NANO_STACKTRACE_BACKTRACE)
   target_link_libraries(nano_lib backtrace)

@@ -1,0 +1,25 @@
+FIXME undefined reference to `boost::log::v2_mt_posix::sinks::text_file_backend::~text_file_backend()'
+
+i have tried ...
+
+change boost version
+
+add to CMakeLists.txt ...
+
+  add_definitions(-DBOOST_ALL_DYN_LINK)
+
+  find_library(libboost_log_so boost_log lib/libboost_log.so)
+  target_link_libraries(Boost::log INTERFACE ${libboost_log_so})
+
+  # https://github.com/boostorg/log/issues/46
+  add_definitions(-DBOOST_LOG_DYN_LINK)
+
+  # https://github.com/boostorg/log/issues/18
+  list(APPEND Boost_LIBRARIES boost_log_setup)
+
+  SET(Boost_USE_STATIC_LIBS ON)
+
+... but nothing helps
+
+probably this requires Boost_USE_STATIC_LIBS
+but nixpkgs has only dynamic boost libs

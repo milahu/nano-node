@@ -97,12 +97,14 @@ add_library(
 
 target_link_libraries(
   nano_store
-  Boost::circular_buffer
-  Boost::endian
+  nano_lib
+  Boost::boost # circular_buffer
+  #Boost::boost # endian
   Boost::iostreams
   Boost::log_setup
   Boost::log
-  Boost::multiprecision
-  Boost::pool
-  Boost::stacktrace
-  Boost::variant)
+  #Boost::boost # multiprecision
+  #Boost::boost # pool
+  #Boost::boost # stacktrace
+  #Boost::boost # variant
+)
